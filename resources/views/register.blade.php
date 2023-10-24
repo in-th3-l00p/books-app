@@ -11,6 +11,12 @@
             @method("POST")
 
             <h1 class="form-title">Register</h1>
+
+            <div class="form-group">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" class="input">
+            </div>
+
             <div class="form-group">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" id="email" name="email" class="input">

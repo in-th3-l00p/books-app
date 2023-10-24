@@ -32,7 +32,8 @@ Route::get("/logout", function (Request $request) {
 Route::view("/register", "register")->name("register.form");
 Route::post("/register", function (Request $request) {
     User::create($request->validate([
-        "email" => "required|email|min:1|max:255",
+        "name" => "required|min:1|max:255",
+        "email" => "required|email|min:1|max:255|unique:users,email",
         "password" => "required|confirmed|min:8"
     ]));
     return redirect()->to("login.form");
