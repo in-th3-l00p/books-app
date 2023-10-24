@@ -36,7 +36,7 @@ Route::post("/register", function (Request $request) {
         "email" => "required|email|min:1|max:255|unique:users,email",
         "password" => "required|confirmed|min:8"
     ]));
-    return redirect()->to("login.form");
+    return redirect()->route("login.form");
 })->name("register.submit");
 
 Route::middleware("auth")->group(function () {

@@ -12,7 +12,7 @@
     @stack("resources")
 </head>
 <body class="bg-white dark:bg-zinc-800 dark:text-white">
-    <header class="m-5 py-5 px-8 bg-red-600 flex justify-between items-center rounded-xl">
+    <header class="m-5 py-5 px-8 bg-red-600 flex flex-wrap justify-between items-center rounded-xl">
         <a href="{{ route("books.index") }}" class="flex items-center gap-3">
             <img
                 src="/icons/book.svg"
