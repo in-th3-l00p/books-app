@@ -13,7 +13,7 @@
                         class="p-8 md:mx-20 lg:mx-32
                             grid grid-cols-2
                             rounded-md border-2 shadow-md
-                            hover:bg-slate-100 dark:hover:bg-zinc-800 "
+                            hover:bg-slate-100 dark:hover:bg-zinc-900 "
                     >
                         <span>
                             <h2 class="text-xl">{{ $book->title }} <span class="font-light">~ {{ $book->author }}</span></h2>

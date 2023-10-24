@@ -32,6 +32,7 @@ if (localStorage.theme === 'dark') {
     themeToggler.children[0].src = "/icons/themes/light.svg";
 } else
     document.documentElement.classList.remove('dark')
+
 themeToggler.onclick = () => {
     if (localStorage.getItem("theme")) {
         localStorage.setItem(
@@ -41,6 +42,12 @@ themeToggler.onclick = () => {
     } else {
         localStorage.setItem("theme", "dark");
     }
+
+    if (localStorage.theme === 'dark') {
+        document.documentElement.classList.add('dark')
+        themeToggler.children[0].src = "/icons/themes/light.svg";
+    } else
+        document.documentElement.classList.remove('dark')
 
     themeToggler.children[0].src = localStorage.getItem("theme") === "light" ?
         "/icons/themes/dark.svg" :

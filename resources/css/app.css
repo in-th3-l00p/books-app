@@ -46,3 +46,10 @@
 .dropdown-link {
     @apply block text-center p-3 hover:bg-slate-200 dark:hover:bg-zinc-700;
 }
+
+/* extends */
+@layer utilities {
+    .filter-invert {
+        filter: invert(100%);
+    }
+}

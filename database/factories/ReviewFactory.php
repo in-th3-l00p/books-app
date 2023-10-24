@@ -23,7 +23,7 @@ class ReviewFactory extends Factory
         return [
             "title" => fake()->sentence(3),
             "message" => fake()->sentence(5),
-            "review" => fake()->numberBetween(0, 5),
+            "rating" => fake()->numberBetween(0, 5),
             "user_id" => User::all()->random()->id,
             "book_id" => $book->id,
             "created_at" => fake()->dateTimeBetween($book->created_at, "now")

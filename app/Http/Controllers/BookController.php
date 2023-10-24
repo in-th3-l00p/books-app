@@ -18,7 +18,7 @@ class BookController extends Controller
             })
             ->paginate(5);
         return view("books.index", [
-            "books" => $books
+            "books" => $books,
         ]);
     }
 
@@ -45,7 +45,8 @@ class BookController extends Controller
     public function show(Book $book)
     {
         return view("books.show", [
-            "book" => $book
+            "book" => $book,
+            "reviews" => $book->reviews()->latest()->paginate(5)
         ]);
     }
 

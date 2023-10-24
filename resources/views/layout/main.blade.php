@@ -8,7 +8,7 @@
 
     <title>Books</title>
 
-    @vite(["resources/css/app.css", "resources/js/app.js"])
+    @vite(["resources/js/app.js", "resources/css/app.css"])
     @stack("resources")
 </head>
 <body class="bg-white dark:bg-zinc-800 dark:text-white">

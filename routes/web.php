@@ -35,7 +35,7 @@ Route::post("/register", function (Request $request) {
 
 Route::middleware("auth")->group(function () {
     Route::resource("books.reviews", ReviewController::class)
-        ->only([ "store", "update", "destroy" ])
+        ->only([ "store", "edit", "update", "destroy" ])
         ->scoped();
 });
 

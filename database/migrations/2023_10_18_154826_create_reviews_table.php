@@ -19,7 +19,7 @@ return new class extends Migration
 
             $table->string("title");
             $table->text("message");
-            $table->smallInteger("review");
+            $table->smallInteger("rating");
 
             $table->foreignIdFor(Book::class);
             $table->foreignIdFor(User::class);

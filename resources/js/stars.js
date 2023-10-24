@@ -18,19 +18,22 @@ const stars = Array
             ]
         };
     });
+const ratingInput = document.getElementById("rating");
 
 function renderRating(rating) {
+    ratingInput.value = rating;
     let i = 0;
     for (; i < Math.floor(rating) && i < stars.length; i++) {
         stars[i].image.src = STAR_ICONS.filledStar;
     }
-    if (rating - Math.floor(rating) && i < stars.length - 1)
+    if (rating - Math.floor(rating) && i < stars.length)
         stars[i++].image.src = STAR_ICONS.halfFilledStar;
     for (; i < stars.length; i++)
         stars[i].image.src = STAR_ICONS.star;
 }
 
+renderRating(ratingInput.value);
 stars.forEach((star, index) => {
-    star.buttons[0].onclick = () => renderRating(index - 0.5);
-    star.buttons[1].onclick = () => renderRating(index);
+    star.buttons[0].onclick = () => renderRating(index + 0.5);
+    star.buttons[1].onclick = () => renderRating(index + 1);
 });
