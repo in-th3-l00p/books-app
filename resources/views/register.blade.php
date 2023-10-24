@@ -22,8 +22,8 @@
             </div>
 
             <div class="form-group">
-                <label for="cpassword" class="form-label">Confirm password:</label>
-                <input type="password" id="cpassword" name="cpassword" class="input">
+                <label for="password_confirmation" class="form-label">Confirm password:</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" class="input">
             </div>
 
             <span class="flex justify-around">

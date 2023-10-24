@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ReviewController;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,11 @@ Route::get("/logout", function (Request $request) {
 
 Route::view("/register", "register")->name("register.form");
 Route::post("/register", function (Request $request) {
-
+    User::create($request->validate([
+        "email" => "required|email|min:1|max:255",
+        "password" => "required|confirmed|min:8"
+    ]));
+    return redirect()->to("login.form");
 })->name("register.submit");
 
 Route::middleware("auth")->group(function () {
